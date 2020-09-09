@@ -1,0 +1,26 @@
+{
+  "name": "redis-counter-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanKr/redis-counter-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NathanKr/redis-counter-playground/issues"
+  },
+  "homepage": "https://github.com/NathanKr/redis-counter-playground#readme",
+  "dependencies": {
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
