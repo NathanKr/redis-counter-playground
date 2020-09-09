@@ -5,17 +5,17 @@ const okResult = "OK";
 
 // --- increment by 1
 function increment(key) {
-    return new Promise((resolve, reject) => {
-      client.incr(key, (err, result) => {
-        if (err) {
-          console.error(err);
-          return reject(err);
-        }
-  
-        return resolve(result); // 
-      });
+  return new Promise((resolve, reject) => {
+    client.incr(key, (err, result) => {
+      if (err) {
+        console.error(err);
+        return reject(err);
+      }
+
+      return resolve(result); //
     });
-  }
+  });
+}
 
 function exist(key) {
   return new Promise((resolve, reject) => {
@@ -25,13 +25,13 @@ function exist(key) {
         return reject(err);
       }
 
-      return resolve(result); // 1 on exist  , 0 on not exist 
+      return resolve(result); // 1 on exist  , 0 on not exist
     });
   });
 }
 
 // result is "OK" on success and error object on failure
-function setValueTo1(key, expiredInSec) {
+function setTo1(key, expiredInSec) {
   return new Promise((resolve, reject) => {
     client.setex(key, expiredInSec, 1, (err, result) => {
       if (err) {
@@ -81,4 +81,4 @@ function finish() {
   });
 }
 
-module.exports = { init, finish, setValueTo1, okResult, get , exist ,increment};
+module.exports = { init, finish, setTo1, okResult, get, exist, increment };
