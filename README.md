@@ -32,3 +32,8 @@ key counter in memory data structure backed by persistence implemented using red
     <td>used for testing to close the connection</td>
   </tr>
 </table>
+
+
+<h2>setup</h2>
+setup require installtion of redis server on linux
+to use it on windows 10 you need WSL
