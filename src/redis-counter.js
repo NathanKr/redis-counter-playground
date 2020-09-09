@@ -12,7 +12,7 @@ function increment(key) {
         return reject(err);
       }
 
-      return resolve(result); //
+      return resolve(result); // return the new value
     });
   });
 }
@@ -44,7 +44,7 @@ function setTo1(key, expiredInSec) {
   });
 }
 
-// -- return number on success
+// -- return integer number on success
 function get(key) {
   return new Promise((resolve, reject) => {
     client.get(key, (err, result) => {
